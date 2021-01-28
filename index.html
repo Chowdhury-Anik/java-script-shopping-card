@@ -43,9 +43,9 @@
                             </div>
                             <div class="col-md-5 center-item">
                                 <div class="input-group number-spinner">
-                                    <button id="caseMinus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                                    <button onclick="handleProductChange(false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
                                     <input id="caseCount" type="text" class="form-control text-center" value="1">
-                                    <button id="casePlus" class="btn btn-default "><i class="fas fa-plus "></i></button>
+                                    <button onclick="handleProductChange(true)" class="btn btn-default "><i class="fas fa-plus "></i></button>
 
                                 </div>
                                 <h5 id="case-Total">$59</h5>
@@ -81,10 +81,12 @@
 
     <script>
         document.getElementById('casePlus').addEventListener('click', function() {
-            handleProductChange(true);
+
+            // handleProductChange(true);
         });
         document.getElementById('caseMinus').addEventListener('click', function() {
-            handleProductChange(false);
+
+            // handleProductChange(false);
         });
 
         function handleProductChange(isIncrease) {
